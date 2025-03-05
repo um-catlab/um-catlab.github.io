@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+  <fr:frontmatter>
+    <fr:authors />
+    <fr:addr>xinyuwang</fr:addr>
+    <fr:route>xinyuwang.xml</fr:route>
+    <fr:title text="Xinyu Wang">Xinyu Wang</fr:title>
+    <fr:taxon>Person</fr:taxon>
+    <fr:meta name="external">https://web.eecs.umich.edu/~xwangsd/</fr:meta>
+    <fr:meta name="position">Assistant Professor</fr:meta>
+    <fr:meta name="institution">University of Michigan</fr:meta>
+  </fr:frontmatter>
+  <fr:mainmatter />
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors />
+            <fr:addr>jesseslater</fr:addr>
+            <fr:route>jesseslater.xml</fr:route>
+            <fr:title text="Jesse Slater">Jesse Slater</fr:title>
+            <fr:taxon>Person</fr:taxon>
+            <fr:meta name="position">PhD Student</fr:meta>
+            <fr:meta name="institution">University of Michigan</fr:meta>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:p>Coadvised by <fr:link href="xinyuwang.xml" title="Xinyu Wang" addr="xinyuwang" type="local">Xinyu Wang</fr:link>.</fr:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
