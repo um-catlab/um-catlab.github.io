@@ -38,8 +38,8 @@ jobs:
           git clone https://git.sr.ht/~jonsterling/ocaml-forester
           cd ocaml-forester
           git checkout ${{ env.FORESTER_BRANCH }}
-          dune build
-          dune install
+          opam exec -- dune build
+          opam exec -- dune install
           cd ..
 
       - name: Save Forester
