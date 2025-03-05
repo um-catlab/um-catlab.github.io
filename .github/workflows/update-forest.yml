@@ -51,7 +51,8 @@ jobs:
       - name: Download and install Forester
         if: steps.cache-forester-restore.outputs.cache-hit != 'true'
         run: |
-          opam init
+          opam init --shell-setup
+          eval $(opam env)
           cd ~
           git clone https://git.sr.ht/~jonsterling/ocaml-forester
           cd ocaml-forester
