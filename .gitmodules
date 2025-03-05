@@ -1,0 +1,3 @@
+[submodule "forest"]
+	path = forest
+	url = https://github.com/um-catlab/forest.git
