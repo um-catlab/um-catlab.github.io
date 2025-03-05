@@ -23,7 +23,7 @@ jobs:
         uses: ocaml/setup-ocaml@v3
         with:
           ocaml-compiler: 5.2.0
-          ocaml-pin : false
+          opam-pin : false
 
 
       - name: Checkout repository
