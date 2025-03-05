@@ -6,4 +6,4 @@ git add .
 
 echo $(date -I) | git commit --file -
 
-git push origin master
+git push origin main
