@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: '0 */6 * * *'  # Fallback check every 6 hours
 
+env:
+  FORESTER_BRANCH : forester-5.0-dev
+  CACHE_PATHS: |
+    ~/.opam
+
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
@@ -14,6 +19,36 @@ jobs:
       contents: write  # Needed for pushing updates
       pages: write     # Needed for deploying to Pages
     steps:
+      - name: Set up OCaml
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: 5.2.0
+
+      - name: Restore Forester
+        uses: actions/cache/restore@v3
+        id: cache-forester-restore
+        with:
+          path: ${{ env.CACHE_PATHS }}
+          key: ${{ runner.os }}-${{ env.FORESTER_BRANCH }}
+
+      - name: Download and install Forester
+        if: steps.cache-forester-restore.outputs.cache-hit != 'true'
+        run: |
+          git clone https://git.sr.ht/~jonsterling/ocaml-forester
+          cd ocaml-forester
+          git checkout ${{ env.FORESTER_BRANCH }}
+          dune build
+          dune install
+          cd ..
+
+      - name: Save Forester
+        if: steps.cache-forester-restore.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v3
+        id: cache-forester-save
+        with:
+          path: ${{ env.CACHE_PATHS }}
+          key: ${{ steps.cache-forester-restore.outputs.cache-primary-key }}
+
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
