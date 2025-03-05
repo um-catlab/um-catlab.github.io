@@ -49,6 +49,7 @@ jobs:
         if: steps.cache-forester-restore.outputs.cache-hit != 'true'
         run: |
           opam update
+          opam switch 5.2.0
           eval $(opam env)
           cd $GITHUB_WORKSPACE
           opam install deps.opam
