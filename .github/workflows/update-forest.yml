@@ -1,0 +1,39 @@
+name: Update Forest Submodule and Deploy
+
+on:
+  repository_dispatch:
+    types: [submodule-updated]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # Fallback check every 6 hours
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Needed for pushing updates
+      pages: write     # Needed for deploying to Pages
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          # Using the default GITHUB_TOKEN works for submodules in the same org
+
+      - name: Update submodule
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git submodule update --remote --recursive
+          git diff --exit-code || (git add . && git commit -m "Update forest submodule" && git push)
+
+      - name: Build site
+        run: |
+          ./build.sh
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build
+          # The default GITHUB_TOKEN works here too
