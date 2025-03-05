@@ -35,7 +35,21 @@ jobs:
         if: steps.cache-forester-restore.outputs.cache-hit != 'true'
         run: |
           opam update
-          opam install dune
+          opam install alcotest
+          opam install brr
+          opam install cid
+          opam install cohttp-eio
+          opam install datalog
+          opam install iri
+          opam install js_of_ocaml-compiler
+          opam install logs
+          opam install lsp
+          opam install merlin
+          opam install menhir
+          opam install note
+          opam install ocaml-base-compiler
+          opam install ppx_yojson_conv
+          opam install yojson
           eval $(opam env)
           git clone https://git.sr.ht/~jonsterling/ocaml-forester
           cd ocaml-forester
