@@ -23,8 +23,6 @@ jobs:
         uses: ocaml/setup-ocaml@v3
         with:
           ocaml-compiler: 5.2.0
-          opam-pin : false
-
 
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -52,7 +50,7 @@ jobs:
           opam update
           eval $(opam env)
           cd $GITHUB_WORKSPACE
-          opam install deps.opam
+          opam install . --deps-only deps.opam
           cd ~
           git clone https://git.sr.ht/~jonsterling/ocaml-forester
           cd ocaml-forester
