@@ -35,7 +35,8 @@ jobs:
         if: steps.cache-forester-restore.outputs.cache-hit != 'true'
         run: |
           opam update
-          eval $(opam env --switch=5.2.0)
+          opam install dune
+          eval $(opam env)
           git clone https://git.sr.ht/~jonsterling/ocaml-forester
           cd ocaml-forester
           git checkout ${{ env.FORESTER_BRANCH }}
