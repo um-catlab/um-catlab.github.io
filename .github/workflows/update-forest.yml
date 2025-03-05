@@ -23,6 +23,7 @@ jobs:
         uses: ocaml/setup-ocaml@v3
         with:
           ocaml-compiler: 5.2.0
+          ocaml-pin : false
 
 
       - name: Checkout repository
@@ -49,7 +50,6 @@ jobs:
         if: steps.cache-forester-restore.outputs.cache-hit != 'true'
         run: |
           opam update
-          opam switch 5.2.0
           eval $(opam env)
           cd $GITHUB_WORKSPACE
           opam install deps.opam
