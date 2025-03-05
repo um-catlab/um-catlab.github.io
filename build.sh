@@ -2,6 +2,8 @@
 
 ./cleanup.sh
 
+git submodule update
+
 cd forest
 
 ./build.sh

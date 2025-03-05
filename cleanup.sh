@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # List of paths to keep
-KEEP=".git .gitignore .gitmodules build.sh cleanup.sh forest"
+KEEP=".git .gitignore .gitmodules build.sh cleanup.sh deploy.sh forest"
 
 # Create a pattern string for grep
 KEEP_PATTERN=""
