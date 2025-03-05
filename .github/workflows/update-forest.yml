@@ -50,6 +50,16 @@ jobs:
           opam install ocaml-base-compiler
           opam install ppx_yojson_conv
           opam install yojson
+          opam install algaeff
+          opam install bwd
+          opam install pure-html
+          opam install repr
+          opam install yuujinchou
+          opam install asai
+          opam install ppx_repr
+          opam install ppx_deriving
+          opam install ppx_derivers
+          opam install eio_main
           eval $(opam env)
           git clone https://git.sr.ht/~jonsterling/ocaml-forester
           cd ocaml-forester
