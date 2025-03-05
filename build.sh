@@ -2,7 +2,7 @@
 
 ./cleanup.sh
 
-git submodule update
+git submodule update --remote
 
 cd forest
 

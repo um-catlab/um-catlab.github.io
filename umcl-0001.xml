@@ -16,7 +16,9 @@
     <fr:route>umcl-0001.xml</fr:route>
     <fr:title text="Test Note">Test Note</fr:title>
   </fr:frontmatter>
-  <fr:mainmatter>\#<fr:tex display="inline"><![CDATA[1 + 1 = 2]]></fr:tex></fr:mainmatter>
+  <fr:mainmatter>
+    <fr:tex display="block"><![CDATA[1 + 1 = 2]]></fr:tex>
+  </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
