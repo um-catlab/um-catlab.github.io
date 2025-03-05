@@ -24,6 +24,20 @@ jobs:
         with:
           ocaml-compiler: 5.2.0
 
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Update submodule
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git submodule update --remote --recursive
+          git diff --exit-code || (git add . && git commit -m "Update forest submodule" && git push)
+
       - name: Restore Forester
         uses: actions/cache/restore@v3
         id: cache-forester-restore
@@ -35,8 +49,10 @@ jobs:
         if: steps.cache-forester-restore.outputs.cache-hit != 'true'
         run: |
           opam update
-          opam install forester.opam
           eval $(opam env)
+          cd $GITHUB_WORKSPACE
+          opam install deps.opam
+          cd ~
           git clone https://git.sr.ht/~jonsterling/ocaml-forester
           cd ocaml-forester
           git checkout ${{ env.FORESTER_BRANCH }}
@@ -51,19 +67,6 @@ jobs:
         with:
           path: ${{ env.CACHE_PATHS }}
           key: ${{ steps.cache-forester-restore.outputs.cache-primary-key }}
-
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          submodules: true
-          token: ${{ secrets.ACCESS_TOKEN }}
-
-      - name: Update submodule
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git submodule update --remote --recursive
-          git diff --exit-code || (git add . && git commit -m "Update forest submodule" && git push)
 
       - name: Build site
         run: |
