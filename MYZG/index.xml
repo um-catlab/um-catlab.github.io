@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>5</fr:month>
+      <fr:day>22</fr:day>
+    </fr:date>
+    <fr:uri>https://um-catlab.github.io/MYZG/</fr:uri>
+    <fr:display-uri>MYZG</fr:display-uri>
+    <fr:route>/MYZG/</fr:route>
+    <fr:title text="Algebraic Theory of an endofunction with a fixed point">Algebraic Theory of an endofunction with a fixed point</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>The algebraic theory of an endofunction with a fixed point consists of two operations</html:p>
+    <html:ol><html:li><fr:tex display="inline"><![CDATA[\delta (1)]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[\Omega (0)]]></fr:tex></html:li></html:ol>
+    <html:p>satisfying one equation <fr:tex display="inline"><![CDATA[\delta (\Omega ) = \Omega ]]></fr:tex>.</html:p>
+    <html:p>A computational intuition is that <fr:tex display="inline"><![CDATA[\delta (x)]]></fr:tex> is an internal computation step and that <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex> is a diverging computation.</html:p>
+    <html:p>The free algebra on <fr:tex display="inline"><![CDATA[X]]></fr:tex> can be explicitly described as having underlying set <fr:tex display="inline"><![CDATA[(\mathbb {N}\times  X) \uplus  \{\Omega \}]]></fr:tex>, i.e. an intensional computation either terminates with a result after some finite number of steps, or it diverges.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>23</fr:day>
+            </fr:date>
+            <fr:uri>https://um-catlab.github.io/O9R3/</fr:uri>
+            <fr:display-uri>O9R3</fr:display-uri>
+            <fr:route>/O9R3/</fr:route>
+            <fr:title text="Delay Monad on Set">Delay Monad on Set</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The Delay monad on Sets is given by the final coalgebra <fr:tex display="inline"><![CDATA[D X = X \uplus  D X]]></fr:tex>. This is monad used as a simple model of programs that may diverge where the number of "steps" is observable.</html:p>
+            <html:p>An explicit construction of the Delay monad can be given by <fr:tex display="block"><![CDATA[D X = \{f : \mathbb {N} \rightharpoonup  X \uplus  1 | f(n) = \textrm {inl}(x) \Rightarrow  f(n+1) = \textrm {inl}(x) ]]></fr:tex> in other words, monotone functions from the natural numbers to the maybe monad on <fr:tex display="inline"><![CDATA[X]]></fr:tex> where the maybe monad is given the ordering that adjoins a bottom element to a discrete order.</html:p>
+            <html:p>The delay monad can be given an inductive characterization as the free <fr:link href="/MYZG/" title="Algebraic Theory of an endofunction with a fixed point" uri="https://um-catlab.github.io/MYZG/" display-uri="MYZG" type="local">fixed point algebra</fr:link> if and only if Markov's principle holds. Without Markov's principle, <fr:tex display="inline"><![CDATA[DX]]></fr:tex> can be given the structure of a fixed point algebra but we cannot prove it is free.</html:p>
+            <html:p>In fact, the delay monad is finitary (and thus the free algebras for an <fr:link href="/L94N/" title="Finitary Algebraic Theory" uri="https://um-catlab.github.io/L94N/" display-uri="L94N" type="local">algebraic theory</fr:link>) if and only if Markov's principle holds. Therefore if the delay monad is finitary then it is the free fixed point algebra.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

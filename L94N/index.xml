@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>5</fr:month>
+      <fr:day>21</fr:day>
+    </fr:date>
+    <fr:uri>https://um-catlab.github.io/L94N/</fr:uri>
+    <fr:display-uri>L94N</fr:display-uri>
+    <fr:route>/L94N/</fr:route>
+    <fr:title text="Finitary Algebraic Theory">Finitary Algebraic Theory</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>A finitary signature is a collection <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex> of operation symbols with assigned <html:em>arities</html:em> which are natural numbers</html:p>
+    <html:p>Given a signature, we can form the type of trees <fr:tex display="inline"><![CDATA[\Sigma ^*X]]></fr:tex>. A finitary algebraic theory is a signature with a collection of axioms, which are pairs of trees <fr:tex display="inline"><![CDATA[\Sigma ^*X]]></fr:tex> for finite <fr:tex display="inline"><![CDATA[X]]></fr:tex>.</html:p>
+    <html:p>An <html:em>algebra</html:em> of a theory <fr:tex display="inline"><![CDATA[\mathcal {A} = (\Sigma , E)]]></fr:tex> consists of a carrier <fr:tex display="inline"><![CDATA[A]]></fr:tex>, for each operation <fr:tex display="inline"><![CDATA[\sigma (n)]]></fr:tex> an operation <fr:tex display="inline"><![CDATA[\sigma  : A^n \to  A]]></fr:tex> such that the induced equations from <fr:tex display="inline"><![CDATA[E]]></fr:tex> are all satisfied. A homomorphism of algebras is a function that commutes with all of the operations. These form into a category <fr:tex display="inline"><![CDATA[(\mathcal {A}-)\textrm {Alg}]]></fr:tex> with a forgetful functor <fr:tex display="inline"><![CDATA[U : \textrm {Alg} \to  \textrm {Set}]]></fr:tex></html:p>
+    <html:p>A <html:em>free algebra</html:em> for a set <fr:tex display="inline"><![CDATA[X]]></fr:tex> is a left adjoint to <fr:tex display="inline"><![CDATA[U]]></fr:tex> at <fr:tex display="inline"><![CDATA[X]]></fr:tex>. Free algebras always exist: they can be constructed as a quotient of <fr:tex display="inline"><![CDATA[\Sigma ^*X]]></fr:tex>, but it is useful when possible to come up with an equivalent description of free algebras as "normal forms" of these quotiented trees.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>23</fr:day>
+            </fr:date>
+            <fr:uri>https://um-catlab.github.io/O9R3/</fr:uri>
+            <fr:display-uri>O9R3</fr:display-uri>
+            <fr:route>/O9R3/</fr:route>
+            <fr:title text="Delay Monad on Set">Delay Monad on Set</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The Delay monad on Sets is given by the final coalgebra <fr:tex display="inline"><![CDATA[D X = X \uplus  D X]]></fr:tex>. This is monad used as a simple model of programs that may diverge where the number of "steps" is observable.</html:p>
+            <html:p>An explicit construction of the Delay monad can be given by <fr:tex display="block"><![CDATA[D X = \{f : \mathbb {N} \rightharpoonup  X \uplus  1 | f(n) = \textrm {inl}(x) \Rightarrow  f(n+1) = \textrm {inl}(x) ]]></fr:tex> in other words, monotone functions from the natural numbers to the maybe monad on <fr:tex display="inline"><![CDATA[X]]></fr:tex> where the maybe monad is given the ordering that adjoins a bottom element to a discrete order.</html:p>
+            <html:p>The delay monad can be given an inductive characterization as the free <fr:link href="/MYZG/" title="Algebraic Theory of an endofunction with a fixed point" uri="https://um-catlab.github.io/MYZG/" display-uri="MYZG" type="local">fixed point algebra</fr:link> if and only if Markov's principle holds. Without Markov's principle, <fr:tex display="inline"><![CDATA[DX]]></fr:tex> can be given the structure of a fixed point algebra but we cannot prove it is free.</html:p>
+            <html:p>In fact, the delay monad is finitary (and thus the free algebras for an <fr:link href="/L94N/" title="Finitary Algebraic Theory" uri="https://um-catlab.github.io/L94N/" display-uri="L94N" type="local">algebraic theory</fr:link>) if and only if Markov's principle holds. Therefore if the delay monad is finitary then it is the free fixed point algebra.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>21</fr:day>
+            </fr:date>
+            <fr:uri>https://um-catlab.github.io/E1XK/</fr:uri>
+            <fr:display-uri>E1XK</fr:display-uri>
+            <fr:route>/E1XK/</fr:route>
+            <fr:title text="Algebraic Theory of Global Mutable Finite State">Algebraic Theory of Global Mutable Finite State</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>The <fr:link href="/L94N/" title="Finitary Algebraic Theory" uri="https://um-catlab.github.io/L94N/" display-uri="L94N" type="local">algebraic theory</fr:link> of global mutable finite state for a finite set <fr:tex display="inline"><![CDATA[S]]></fr:tex> has operations</html:p>
+            <html:p>
+              <html:ol><html:li><fr:tex display="inline"><![CDATA[l(S)]]></fr:tex>, short for "lookup"</html:li> <html:li>For each <fr:tex display="inline"><![CDATA[s : S]]></fr:tex>, <fr:tex display="inline"><![CDATA[u{[s]}(1)]]></fr:tex> short for "update"</html:li></html:ol>
+            </html:p>
+            <html:p>subject to the equations</html:p>
+            <html:p>
+              <html:ol><html:li><fr:tex display="inline"><![CDATA[l(\lambda  s. u{[s]}(x)) = x]]></fr:tex></html:li> <html:li><fr:tex display="inline"><![CDATA[u{[s]}(u{[s']}(x)) = u{[s']}(x)]]></fr:tex></html:li> <html:li><fr:tex display="inline"><![CDATA[u{[s]}(l(t)) = u{[s]}(t(s))]]></fr:tex></html:li></html:ol>
+            </html:p>
+            <html:p>Intuitively the lookup operation branches on the value of the state, picking the appopriate argument as continuation and update sets the value of the state and then proceeds with the continuation.</html:p>
+            <html:p>The equations say that (1) updating the state to what you just read does nothing (2) updating overwrites a preceding update and (3) lookup executes the continuation corresponding to the most recent update.</html:p>
+            <html:p>The <fr:link href="/L94N/" title="Finitary Algebraic Theory" uri="https://um-catlab.github.io/L94N/" display-uri="L94N" type="local">free state algebra</fr:link> on a set <fr:tex display="inline"><![CDATA[X]]></fr:tex> can be constructed explicitly as the stateful functions <fr:tex display="inline"><![CDATA[(S \times  X)^S]]></fr:tex> and the state monad is the corresponding free algebra monad.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

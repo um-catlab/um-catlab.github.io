@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="default.xsl"?>
-<fr:tree xmlns:fr="http://www.jonmsterling.com/jms-005P.xml" root="false">
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
   <fr:frontmatter>
     <fr:authors />
-    <fr:addr>ericbond</fr:addr>
-    <fr:route>ericbond.xml</fr:route>
+    <fr:uri>https://um-catlab.github.io/ericbond/</fr:uri>
+    <fr:display-uri>ericbond</fr:display-uri>
+    <fr:route>/ericbond/</fr:route>
     <fr:title text="Eric Bond">Eric Bond</fr:title>
-    <fr:taxon>Person</fr:taxon>
+    <fr:taxon>person</fr:taxon>
     <fr:meta name="external">https://externalhom.com/</fr:meta>
     <fr:meta name="position">PhD Student</fr:meta>
     <fr:meta name="orcid">0009-0008-1575-9606</fr:meta>
@@ -16,30 +17,35 @@
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="References">References</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Context">Context</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
+        <fr:authors />
         <fr:title text="Contributions">Contributions</fr:title>
       </fr:frontmatter>
       <fr:mainmatter />
