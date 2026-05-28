@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>5</fr:month>
+      <fr:day>26</fr:day>
+    </fr:date>
+    <fr:uri>https://um-catlab.github.io/VWNF/</fr:uri>
+    <fr:display-uri>VWNF</fr:display-uri>
+    <fr:route>/VWNF/</fr:route>
+    <fr:title text="Extended Natural Numbers">Extended Natural Numbers</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>The extended natural numbers <fr:tex display="inline"><![CDATA[\mathbb {N}_\infty ]]></fr:tex> are the final coalgebra for the functor <fr:tex display="inline"><![CDATA[X \mapsto  X \uplus  1]]></fr:tex> in the category of sets. Concretely these can be constructed as monotone functions from <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> to the booleans. Since the natural numbers are the initial algebra for the same functor we get an canonical injective function <fr:tex display="inline"><![CDATA[\mathbb {N} \to  \mathbb {N}_\infty ]]></fr:tex>. We say an extended natural number is <html:em>finite</html:em> if it is in the image of this function.</html:p>
+    <html:p>In classical mathematics, the extended natural numbers are simply a coproduct of the natural numbers with a single "infinite" point. Constructively, we can define a function <fr:tex display="inline"><![CDATA[\mathbb {N} \uplus  1 \to  \mathbb {N} \to  \mathbb {N}_\infty ]]></fr:tex> and it being an isomorphism is one of the formulations of <fr:link href="/QCIE/" title="Markov's Principle" uri="https://um-catlab.github.io/QCIE/" display-uri="QCIE" type="local">Markov's principle</fr:link>.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>26</fr:day>
+            </fr:date>
+            <fr:uri>https://um-catlab.github.io/QCIE/</fr:uri>
+            <fr:display-uri>QCIE</fr:display-uri>
+            <fr:route>/QCIE/</fr:route>
+            <fr:title text="Markov's Principle">Markov's Principle</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Markov's Principle is a weak choice principle, weaker than the law of excluded middle.
+It can be formulated in many equivalent ways:
+<html:ol><html:li>Any sequence of booleans <fr:tex display="inline"><![CDATA[\mathbb {N} \to  \mathbb {B}]]></fr:tex> that is not always 0 must contain a 1.</html:li>
+<html:li>The <fr:link href="/VWNF/" title="Extended Natural Numbers" uri="https://um-catlab.github.io/VWNF/" display-uri="VWNF" type="local">extended natural numbers</fr:link> are equivalent to the natural numbers with a point adjoined. More precisely, the inclusion <fr:tex display="inline"><![CDATA[\mathbb {N}\uplus \{\Omega \} \to  \mathbb {N}_\infty ]]></fr:tex> is surjective (and thus a bijection).</html:li></html:ol></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2026</fr:year>
+              <fr:month>5</fr:month>
+              <fr:day>26</fr:day>
+            </fr:date>
+            <fr:uri>https://um-catlab.github.io/QCIE/</fr:uri>
+            <fr:display-uri>QCIE</fr:display-uri>
+            <fr:route>/QCIE/</fr:route>
+            <fr:title text="Markov's Principle">Markov's Principle</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Markov's Principle is a weak choice principle, weaker than the law of excluded middle.
+It can be formulated in many equivalent ways:
+<html:ol><html:li>Any sequence of booleans <fr:tex display="inline"><![CDATA[\mathbb {N} \to  \mathbb {B}]]></fr:tex> that is not always 0 must contain a 1.</html:li>
+<html:li>The <fr:link href="/VWNF/" title="Extended Natural Numbers" uri="https://um-catlab.github.io/VWNF/" display-uri="VWNF" type="local">extended natural numbers</fr:link> are equivalent to the natural numbers with a point adjoined. More precisely, the inclusion <fr:tex display="inline"><![CDATA[\mathbb {N}\uplus \{\Omega \} \to  \mathbb {N}_\infty ]]></fr:tex> is surjective (and thus a bijection).</html:li></html:ol></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

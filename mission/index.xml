@@ -120,7 +120,194 @@ Coadvised by <fr:link href="/xinyuwang/" title="Xinyu Wang" uri="https://um-catl
                     <fr:meta name="orcid">0000-0001-8141-195X</fr:meta>
                     <fr:meta name="institution">University of Michigan</fr:meta>
                   </fr:frontmatter>
-                  <fr:mainmatter />
+                  <fr:mainmatter>
+                    <html:p>Posts</html:p>
+                    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>5</fr:month>
+                          <fr:day>27</fr:day>
+                        </fr:date>
+                        <fr:uri>https://um-catlab.github.io/XO0Z/</fr:uri>
+                        <fr:display-uri>XO0Z</fr:display-uri>
+                        <fr:route>/XO0Z/</fr:route>
+                        <fr:title text="Topos of Step-indexed Sets">Topos of Step-indexed Sets</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>The topos of step-indexed sets, more commonly called the <html:em>topos of trees</html:em> is a simple model of step-indexing.</html:p>
+                        <html:p>There are many equivalent formulations of this category, that all give slightly different definitions of what a step-indexed set is.
+<html:ol><html:li>Presheaves on the ordinal category <fr:tex display="inline"><![CDATA[\omega ]]></fr:tex>.</html:li>
+<html:li>Sheaves on <fr:tex display="inline"><![CDATA[\omega ]]></fr:tex> with the sheaf condition being that <fr:tex display="inline"><![CDATA[P(0)]]></fr:tex> is a one-element set.</html:li>
+<html:li>Sheaves on <fr:tex display="inline"><![CDATA[\omega  + 1]]></fr:tex> with the sheaf condition being that the projections from <fr:tex display="inline"><![CDATA[P(\omega )]]></fr:tex> to <fr:tex display="inline"><![CDATA[P(n)]]></fr:tex> for all finite <fr:tex display="inline"><![CDATA[n]]></fr:tex> is a limit cone.</html:li>
+<html:li>Sheaves on <fr:tex display="inline"><![CDATA[\omega  + 1]]></fr:tex> with the sheaf condition being that the projections from <fr:tex display="inline"><![CDATA[P(\omega )]]></fr:tex> to <fr:tex display="inline"><![CDATA[P(n)]]></fr:tex> for all finite <fr:tex display="inline"><![CDATA[n]]></fr:tex> is a limit cone and that <fr:tex display="inline"><![CDATA[P(0)]]></fr:tex> is a one-element set</html:li>
+<html:li>(Assuming <fr:link href="/QCIE/" title="Markov's Principle" uri="https://um-catlab.github.io/QCIE/" display-uri="QCIE" type="local">Markov's Principle</fr:link>) Sheaves on the topological space whose points are natural numbers and opens are downward-closed subsets.</html:li></html:ol>
+The last two are essentially the same if we identify the downward closed subsets of <fr:tex display="inline"><![CDATA[\omega ]]></fr:tex> with their cardinality. The first two are equivalent by identifying the presheaf <fr:tex display="inline"><![CDATA[P(n)]]></fr:tex> with the sheaf's <fr:tex display="inline"><![CDATA[P(n+1)]]></fr:tex>. For the remainder of this note we will use definition (4).
+</html:p>
+                        <html:p>The global sections functor <fr:tex display="inline"><![CDATA[\Gamma  : \textrm {Sh}(\omega  + 1) \to  \textrm {Set}]]></fr:tex> is a forgetful functor projecting out the set <fr:tex display="inline"><![CDATA[X(\omega )]]></fr:tex>. Under this point of view we can think of the topos of step-indexed sets as a category of sets with structure (though note that the functor is not faithful). The left adjoint <fr:tex display="inline"><![CDATA[\Delta  : \textrm {Set} \to  \textrm {Sh}(\omega  + 1)]]></fr:tex> is defined as <fr:tex display="inline"><![CDATA[\Delta (A)(0) = 1]]></fr:tex> and <fr:tex display="inline"><![CDATA[\Delta (A)(n) = A]]></fr:tex> otherwise.</html:p>
+                        <html:p>This category is useful in denotational semantics as it supports the definition of <html:em>guarded</html:em> recursive functions and types.</html:p>
+                        <html:p>First we define an endofunctor, <fr:tex display="inline"><![CDATA[\triangleright ]]></fr:tex>, pronounced <html:em>later</html:em> or <html:em>guard</html:em>. The functor is defined as the restriction of sheaves along the truncated predecessor function <fr:tex display="inline"><![CDATA[\textrm {pred} : \omega  + 1 \to  \omega  + 1]]></fr:tex>, which can be verified to preserve the sheaf condition. Since <fr:tex display="inline"><![CDATA[\textrm {pred} \leq  \textrm {id}]]></fr:tex> we get a natural transformation <fr:tex display="inline"><![CDATA[\textrm {next} : \textrm {Id} \Rightarrow  \triangleright ]]></fr:tex>, on components this is just the restriction map <fr:tex display="inline"><![CDATA[X(n) \to  X(\textrm {pred}(n))]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[\omega ]]></fr:tex> is a fixed point of the predecessor function, the global sections functor "erases" the later <fr:tex display="inline"><![CDATA[\Gamma (\triangleright  X) = \Gamma  X]]></fr:tex>.</html:p>
+                        <html:p>A <html:em>later algebra</html:em> is defined as a sheaf <fr:tex display="inline"><![CDATA[X]]></fr:tex> with a morphism <fr:tex display="inline"><![CDATA[\alpha  : \triangleright  X \to  X]]></fr:tex>. Expanding the definition this gives us a natural family of functions <fr:tex display="inline"><![CDATA[X(\textrm {pred}(n)) \to  X(n)]]></fr:tex>. We can compose <fr:tex display="inline"><![CDATA[\alpha  \circ  \textrm {next} : X \to  X]]></fr:tex> to get an endofunction. The guarded recursion principle says that this endofunction has a unique fixed point <fr:tex display="inline"><![CDATA[\textrm {gfix}(\alpha ) : 1 \to  X]]></fr:tex> satisfying <fr:tex display="block"><![CDATA[\alpha  \circ  \textrm {next} \circ  \textrm {gfix}(\alpha ) = \textrm {gfix}(\alpha )]]></fr:tex>. Under the global sections functor, a later algebra just becomes an endofunction and the guarded fixed point is just a fixed point. In this way, the topos of step-indexed sets can be used as a technical device for recursive definitions in <fr:tex display="inline"><![CDATA[\textrm {Set}]]></fr:tex>.</html:p>
+                        <html:p>The <html:em>free later algebra</html:em> <fr:tex display="inline"><![CDATA[D X]]></fr:tex> is the step-indexed analog of the <fr:link href="/O9R3/" title="Delay Monad on Set" uri="https://um-catlab.github.io/O9R3/" display-uri="O9R3" type="local">Delay Monad</fr:link>. The global sections functor sends the step-indexed delay monad to the set-based delay monad <fr:tex display="inline"><![CDATA[\Gamma (D (\Delta (X))) \cong  D(X)]]></fr:tex>. This is a resolution of the "algebraicity" of the Delay monad: in Set, the Delay monad is algebraic if and only if Markov's principle holds, but constructively the step-indexed delay monad is "algebraic" but in a generalized sense that it is freely generated by an algebraic operation of non-standard arity.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>5</fr:month>
+                          <fr:day>26</fr:day>
+                        </fr:date>
+                        <fr:uri>https://um-catlab.github.io/VWNF/</fr:uri>
+                        <fr:display-uri>VWNF</fr:display-uri>
+                        <fr:route>/VWNF/</fr:route>
+                        <fr:title text="Extended Natural Numbers">Extended Natural Numbers</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>The extended natural numbers <fr:tex display="inline"><![CDATA[\mathbb {N}_\infty ]]></fr:tex> are the final coalgebra for the functor <fr:tex display="inline"><![CDATA[X \mapsto  X \uplus  1]]></fr:tex> in the category of sets. Concretely these can be constructed as monotone functions from <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> to the booleans. Since the natural numbers are the initial algebra for the same functor we get an canonical injective function <fr:tex display="inline"><![CDATA[\mathbb {N} \to  \mathbb {N}_\infty ]]></fr:tex>. We say an extended natural number is <html:em>finite</html:em> if it is in the image of this function.</html:p>
+                        <html:p>In classical mathematics, the extended natural numbers are simply a coproduct of the natural numbers with a single "infinite" point. Constructively, we can define a function <fr:tex display="inline"><![CDATA[\mathbb {N} \uplus  1 \to  \mathbb {N} \to  \mathbb {N}_\infty ]]></fr:tex> and it being an isomorphism is one of the formulations of <fr:link href="/QCIE/" title="Markov's Principle" uri="https://um-catlab.github.io/QCIE/" display-uri="QCIE" type="local">Markov's principle</fr:link>.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>5</fr:month>
+                          <fr:day>26</fr:day>
+                        </fr:date>
+                        <fr:uri>https://um-catlab.github.io/QCIE/</fr:uri>
+                        <fr:display-uri>QCIE</fr:display-uri>
+                        <fr:route>/QCIE/</fr:route>
+                        <fr:title text="Markov's Principle">Markov's Principle</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Markov's Principle is a weak choice principle, weaker than the law of excluded middle.
+It can be formulated in many equivalent ways:
+<html:ol><html:li>Any sequence of booleans <fr:tex display="inline"><![CDATA[\mathbb {N} \to  \mathbb {B}]]></fr:tex> that is not always 0 must contain a 1.</html:li>
+<html:li>The <fr:link href="/VWNF/" title="Extended Natural Numbers" uri="https://um-catlab.github.io/VWNF/" display-uri="VWNF" type="local">extended natural numbers</fr:link> are equivalent to the natural numbers with a point adjoined. More precisely, the inclusion <fr:tex display="inline"><![CDATA[\mathbb {N}\uplus \{\Omega \} \to  \mathbb {N}_\infty ]]></fr:tex> is surjective (and thus a bijection).</html:li></html:ol></html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>5</fr:month>
+                          <fr:day>23</fr:day>
+                        </fr:date>
+                        <fr:uri>https://um-catlab.github.io/O9R3/</fr:uri>
+                        <fr:display-uri>O9R3</fr:display-uri>
+                        <fr:route>/O9R3/</fr:route>
+                        <fr:title text="Delay Monad on Set">Delay Monad on Set</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>The Delay monad on Sets is given by the final coalgebra <fr:tex display="inline"><![CDATA[D X = X \uplus  D X]]></fr:tex>. This is monad used as a simple model of programs that may diverge where the number of "steps" is observable.</html:p>
+                        <html:p>An explicit construction of the Delay monad can be given by <fr:tex display="block"><![CDATA[D X = \{f : \mathbb {N} \rightharpoonup  X \uplus  1 | f(n) = \textrm {inl}(x) \Rightarrow  f(n+1) = \textrm {inl}(x) ]]></fr:tex> in other words, monotone functions from the natural numbers to the maybe monad on <fr:tex display="inline"><![CDATA[X]]></fr:tex> where the maybe monad is given the ordering that adjoins a bottom element to a discrete order.</html:p>
+                        <html:p>The delay monad can be given an inductive characterization as the free <fr:link href="/MYZG/" title="Algebraic Theory of an endofunction with a fixed point" uri="https://um-catlab.github.io/MYZG/" display-uri="MYZG" type="local">fixed point algebra</fr:link> if and only if Markov's principle holds. Without Markov's principle, <fr:tex display="inline"><![CDATA[DX]]></fr:tex> can be given the structure of a fixed point algebra but we cannot prove it is free.</html:p>
+                        <html:p>In fact, the delay monad is finitary (and thus the free algebras for an <fr:link href="/L94N/" title="Finitary Algebraic Theory" uri="https://um-catlab.github.io/L94N/" display-uri="L94N" type="local">algebraic theory</fr:link>) if and only if Markov's principle holds. Therefore if the delay monad is finitary then it is the free fixed point algebra.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>5</fr:month>
+                          <fr:day>22</fr:day>
+                        </fr:date>
+                        <fr:uri>https://um-catlab.github.io/MYZG/</fr:uri>
+                        <fr:display-uri>MYZG</fr:display-uri>
+                        <fr:route>/MYZG/</fr:route>
+                        <fr:title text="Algebraic Theory of an endofunction with a fixed point">Algebraic Theory of an endofunction with a fixed point</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>The algebraic theory of an endofunction with a fixed point consists of two operations</html:p>
+                        <html:ol><html:li><fr:tex display="inline"><![CDATA[\delta (1)]]></fr:tex></html:li>
+<html:li><fr:tex display="inline"><![CDATA[\Omega (0)]]></fr:tex></html:li></html:ol>
+                        <html:p>satisfying one equation <fr:tex display="inline"><![CDATA[\delta (\Omega ) = \Omega ]]></fr:tex>.</html:p>
+                        <html:p>A computational intuition is that <fr:tex display="inline"><![CDATA[\delta (x)]]></fr:tex> is an internal computation step and that <fr:tex display="inline"><![CDATA[\Omega ]]></fr:tex> is a diverging computation.</html:p>
+                        <html:p>The free algebra on <fr:tex display="inline"><![CDATA[X]]></fr:tex> can be explicitly described as having underlying set <fr:tex display="inline"><![CDATA[(\mathbb {N}\times  X) \uplus  \{\Omega \}]]></fr:tex>, i.e. an intensional computation either terminates with a result after some finite number of steps, or it diverges.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>5</fr:month>
+                          <fr:day>21</fr:day>
+                        </fr:date>
+                        <fr:uri>https://um-catlab.github.io/E1XK/</fr:uri>
+                        <fr:display-uri>E1XK</fr:display-uri>
+                        <fr:route>/E1XK/</fr:route>
+                        <fr:title text="Algebraic Theory of Global Mutable Finite State">Algebraic Theory of Global Mutable Finite State</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>The <fr:link href="/L94N/" title="Finitary Algebraic Theory" uri="https://um-catlab.github.io/L94N/" display-uri="L94N" type="local">algebraic theory</fr:link> of global mutable finite state for a finite set <fr:tex display="inline"><![CDATA[S]]></fr:tex> has operations</html:p>
+                        <html:p>
+                          <html:ol><html:li><fr:tex display="inline"><![CDATA[l(S)]]></fr:tex>, short for "lookup"</html:li> <html:li>For each <fr:tex display="inline"><![CDATA[s : S]]></fr:tex>, <fr:tex display="inline"><![CDATA[u{[s]}(1)]]></fr:tex> short for "update"</html:li></html:ol>
+                        </html:p>
+                        <html:p>subject to the equations</html:p>
+                        <html:p>
+                          <html:ol><html:li><fr:tex display="inline"><![CDATA[l(\lambda  s. u{[s]}(x)) = x]]></fr:tex></html:li> <html:li><fr:tex display="inline"><![CDATA[u{[s]}(u{[s']}(x)) = u{[s']}(x)]]></fr:tex></html:li> <html:li><fr:tex display="inline"><![CDATA[u{[s]}(l(t)) = u{[s]}(t(s))]]></fr:tex></html:li></html:ol>
+                        </html:p>
+                        <html:p>Intuitively the lookup operation branches on the value of the state, picking the appopriate argument as continuation and update sets the value of the state and then proceeds with the continuation.</html:p>
+                        <html:p>The equations say that (1) updating the state to what you just read does nothing (2) updating overwrites a preceding update and (3) lookup executes the continuation corresponding to the most recent update.</html:p>
+                        <html:p>The <fr:link href="/L94N/" title="Finitary Algebraic Theory" uri="https://um-catlab.github.io/L94N/" display-uri="L94N" type="local">free state algebra</fr:link> on a set <fr:tex display="inline"><![CDATA[X]]></fr:tex> can be constructed explicitly as the stateful functions <fr:tex display="inline"><![CDATA[(S \times  X)^S]]></fr:tex> and the state monad is the corresponding free algebra monad.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2026</fr:year>
+                          <fr:month>5</fr:month>
+                          <fr:day>21</fr:day>
+                        </fr:date>
+                        <fr:uri>https://um-catlab.github.io/L94N/</fr:uri>
+                        <fr:display-uri>L94N</fr:display-uri>
+                        <fr:route>/L94N/</fr:route>
+                        <fr:title text="Finitary Algebraic Theory">Finitary Algebraic Theory</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>A finitary signature is a collection <fr:tex display="inline"><![CDATA[\Sigma ]]></fr:tex> of operation symbols with assigned <html:em>arities</html:em> which are natural numbers</html:p>
+                        <html:p>Given a signature, we can form the type of trees <fr:tex display="inline"><![CDATA[\Sigma ^*X]]></fr:tex>. A finitary algebraic theory is a signature with a collection of axioms, which are pairs of trees <fr:tex display="inline"><![CDATA[\Sigma ^*X]]></fr:tex> for finite <fr:tex display="inline"><![CDATA[X]]></fr:tex>.</html:p>
+                        <html:p>An <html:em>algebra</html:em> of a theory <fr:tex display="inline"><![CDATA[\mathcal {A} = (\Sigma , E)]]></fr:tex> consists of a carrier <fr:tex display="inline"><![CDATA[A]]></fr:tex>, for each operation <fr:tex display="inline"><![CDATA[\sigma (n)]]></fr:tex> an operation <fr:tex display="inline"><![CDATA[\sigma  : A^n \to  A]]></fr:tex> such that the induced equations from <fr:tex display="inline"><![CDATA[E]]></fr:tex> are all satisfied. A homomorphism of algebras is a function that commutes with all of the operations. These form into a category <fr:tex display="inline"><![CDATA[(\mathcal {A}-)\textrm {Alg}]]></fr:tex> with a forgetful functor <fr:tex display="inline"><![CDATA[U : \textrm {Alg} \to  \textrm {Set}]]></fr:tex></html:p>
+                        <html:p>A <html:em>free algebra</html:em> for a set <fr:tex display="inline"><![CDATA[X]]></fr:tex> is a left adjoint to <fr:tex display="inline"><![CDATA[U]]></fr:tex> at <fr:tex display="inline"><![CDATA[X]]></fr:tex>. Free algebras always exist: they can be constructed as a quotient of <fr:tex display="inline"><![CDATA[\Sigma ^*X]]></fr:tex>, but it is useful when possible to come up with an equivalent description of free algebras as "normal forms" of these quotiented trees.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
                   <fr:frontmatter>
