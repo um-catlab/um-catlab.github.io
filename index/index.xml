@@ -105,6 +105,52 @@ Coadvised by <fr:link href="/xinyuwang/" title="Xinyu Wang" uri="https://um-catl
                 </fr:authors>
                 <fr:date>
                   <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>https://um-catlab.github.io/1WP4/</fr:uri>
+                <fr:display-uri>1WP4</fr:display-uri>
+                <fr:route>/1WP4/</fr:route>
+                <fr:title text="Relative Monad">Relative Monad</fr:title>
+                <fr:taxon>definition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>A monad relative to a profunctor <fr:tex display="inline"><![CDATA[\mathcal  J : \mathcal  D \to  \textrm {Psh} \mathcal  C]]></fr:tex> is a function <fr:tex display="inline"><![CDATA[T : |\mathcal  C| \to  |\mathcal  D|]]></fr:tex> with operations <fr:tex display="inline"><![CDATA[\eta _X : \mathcal  J(X,TX)]]></fr:tex> and <fr:tex display="inline"><![CDATA[-^\dagger  : \mathcal  J(X,TY) \to  \mathcal  D(TX,TY)]]></fr:tex> satisfying three laws <fr:tex display="block"><![CDATA[\eta ^\dagger  = \textrm {id}]]></fr:tex> <fr:tex display="block"><![CDATA[j^\dagger  \circ  \eta  = j]]></fr:tex> <fr:tex display="block"><![CDATA[(j^\dagger  \circ  k)^\dagger  = j^\dagger  \circ  k^\dagger ]]></fr:tex></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>1</fr:day>
+                </fr:date>
+                <fr:uri>https://um-catlab.github.io/KAYO/</fr:uri>
+                <fr:display-uri>KAYO</fr:display-uri>
+                <fr:route>/KAYO/</fr:route>
+                <fr:title text="Strong Monad">Strong Monad</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>A (left) strength of a monad <fr:tex display="inline"><![CDATA[T]]></fr:tex> with respect to a monoidal structure <fr:tex display="inline"><![CDATA[\otimes ]]></fr:tex> is a natural transformation <fr:tex display="inline"><![CDATA[\sigma  : \Gamma  \otimes  T A \to  T (\Gamma  \otimes  A)]]></fr:tex> satisfying certain laws. A concise formulation is that a left-strength is a lifting of <fr:tex display="inline"><![CDATA[T]]></fr:tex> from a monad on categories to a monad on actegories, with the monoidal category <fr:tex display="inline"><![CDATA[\mathcal  C]]></fr:tex> acting on itself. If <fr:tex display="inline"><![CDATA[\mathcal  C]]></fr:tex> is a monoidal closed category, then strength is equivalently an enrichment of <fr:tex display="inline"><![CDATA[T]]></fr:tex>.</html:p>
+                <html:p>The most general version of this is <fr:link href="/Slattery-TAC-2023/" title="Pseudocommutativity and lax idempotency for relative pseudomonads" uri="https://um-catlab.github.io/Slattery-TAC-2023/" display-uri="Slattery-TAC-2023" type="local">given by Slattery</fr:link>: a strong monad on multicategories is given by a unit map <fr:tex display="inline"><![CDATA[\mathcal  C(X;T X)]]></fr:tex> and an extension map <fr:tex display="inline"><![CDATA[\mathcal  C(\Gamma ,X,\Delta ;TY) \to  \mathcal  C(\Gamma ,TX,\Delta ;TY)]]></fr:tex> satisfying some laws. This makes the connection to the semantics of effectful programming languages apparent: a monad only has an extension map for unary morphisms but a strength allows for an extension of any single input of a multimorphism. In programming languages terms, the strength is what allows for the use of a monadic bind in the presence of other variables.</html:p>
+                <html:p>Despite the common term strong monad, a strength is in general a <html:em>structure</html:em>, though in some special cases it is a property.</html:p>
+                <html:p>All monads on the category of sets are canonically Set-enriched and therefore carry a strength. Non-trivial strengths abound in (pre)sheaf semantics.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
                   <fr:month>5</fr:month>
                   <fr:day>27</fr:day>
                 </fr:date>

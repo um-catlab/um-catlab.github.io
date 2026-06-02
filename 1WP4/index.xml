@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2026</fr:year>
+      <fr:month>6</fr:month>
+      <fr:day>2</fr:day>
+    </fr:date>
+    <fr:uri>https://um-catlab.github.io/1WP4/</fr:uri>
+    <fr:display-uri>1WP4</fr:display-uri>
+    <fr:route>/1WP4/</fr:route>
+    <fr:title text="Relative Monad">Relative Monad</fr:title>
+    <fr:taxon>definition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>A monad relative to a profunctor <fr:tex display="inline"><![CDATA[\mathcal  J : \mathcal  D \to  \textrm {Psh} \mathcal  C]]></fr:tex> is a function <fr:tex display="inline"><![CDATA[T : |\mathcal  C| \to  |\mathcal  D|]]></fr:tex> with operations <fr:tex display="inline"><![CDATA[\eta _X : \mathcal  J(X,TX)]]></fr:tex> and <fr:tex display="inline"><![CDATA[-^\dagger  : \mathcal  J(X,TY) \to  \mathcal  D(TX,TY)]]></fr:tex> satisfying three laws <fr:tex display="block"><![CDATA[\eta ^\dagger  = \textrm {id}]]></fr:tex> <fr:tex display="block"><![CDATA[j^\dagger  \circ  \eta  = j]]></fr:tex> <fr:tex display="block"><![CDATA[(j^\dagger  \circ  k)^\dagger  = j^\dagger  \circ  k^\dagger ]]></fr:tex></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
