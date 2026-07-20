@@ -130,6 +130,39 @@ Coadvised by <fr:link href="/xinyuwang/" title="Xinyu Wang" uri="https://um-catl
                   <fr:month>6</fr:month>
                   <fr:day>1</fr:day>
                 </fr:date>
+                <fr:uri>https://um-catlab.github.io/DWP5/</fr:uri>
+                <fr:display-uri>DWP5</fr:display-uri>
+                <fr:route>/DWP5/</fr:route>
+                <fr:title text="Example of a monad with no strength: Allocation on Indexed Sets">Example of a monad with no strength: Allocation on Indexed Sets</fr:title>
+                <fr:taxon>theorem</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Consider the following monad on <fr:tex display="inline"><![CDATA[\textrm {Set}^\mathbb {N}]]></fr:tex>:
+<fr:tex display="block"><![CDATA[
+\begin {align*}
+  T(X) n &= \sum _{m : \mathbb {N}} X (n + m)\\
+  \eta  n x &= (0, x) \\
+  (f : X \to  TY)^\dagger  n (m , x) &= (m + p , y) && \textrm {where } f (n + m) x = (p , y)
+\end {align*}]]></fr:tex>
+Our intuition is that <fr:tex display="inline"><![CDATA[\textrm {Set}^\mathbb {N}]]></fr:tex> is a simple (but deficient) model of allocation: the <fr:tex display="inline"><![CDATA[\mathbb {N}]]></fr:tex> represents the number of resources that have been allocated, so that the meaning of types can be dependent on this. Then this monad is an attempt at an allocation monad: an element tells you how many new cells are allocated and gives you a value valid in that future. But this monad does not work for typical denotational semantics because the monad cannot be given a <fr:link href="/KAYO/" title="Strong Monad" uri="https://um-catlab.github.io/KAYO/" display-uri="KAYO" type="local">strength</fr:link> with respect to the cartesian product monoidal structure.</html:p>
+                <html:p>Aside: The easiest way to verify that this is a monad is to see that the construction is left adjoint to the forgetful <fr:tex display="inline"><![CDATA[U : \textrm {Set}^{\omega ^\textrm {op}} \to  \textrm {Set}^\mathbb {N}]]></fr:tex> and this is the induced monad. In fact this adjunction is monadic.</html:p>
+                <html:p>A strength would be a natural <fr:tex display="inline"><![CDATA[\sigma  : \Gamma \times  T(X) \to  T(\Gamma  \times  X)]]></fr:tex>. Intuitively such a morphism would send <fr:tex display="inline"><![CDATA[(\gamma  , (m , x))]]></fr:tex> to <fr:tex display="inline"><![CDATA[(m , (\uparrow  \gamma  , x))]]></fr:tex> but the problem is that no such <fr:tex display="inline"><![CDATA[\uparrow  \gamma ]]></fr:tex> is guaranteed to exist, and therefore a strength cannot be constructed.</html:p>
+                <html:p>As a concrete counterexample, pick <fr:tex display="inline"><![CDATA[\Gamma  = y(0)]]></fr:tex> and <fr:tex display="inline"><![CDATA[A = y(1)]]></fr:tex> where <fr:tex display="inline"><![CDATA[y(m) n = m \equiv  n]]></fr:tex> is the Yoneda embedding/Dirac <fr:tex display="inline"><![CDATA[\delta ]]></fr:tex>. Note that <fr:tex display="inline"><![CDATA[T 0 \cong  0]]></fr:tex> and <fr:tex display="inline"><![CDATA[y(0) \times  y(1) \cong  0]]></fr:tex>. But the strength gives us a morphism <fr:tex display="inline"><![CDATA[y(0)\times  T(y(1)) \to  T(y(0)\times  y(1)) \cong  T0\cong  0]]></fr:tex>. Since <fr:tex display="inline"><![CDATA[\textrm {Set}^\mathbb {N}]]></fr:tex> is cartesian closed, <fr:tex display="inline"><![CDATA[0]]></fr:tex> is strict initial so this implies that <fr:tex display="inline"><![CDATA[y(0)\times  T(y(1)) \cong  0]]></fr:tex> but this is false as there is an element <fr:tex display="inline"><![CDATA[(\textrm {refl}(0), (1, \textrm {refl}(1))) : (y(0) \times  T(y(1))) 0]]></fr:tex>.</html:p>
+                <html:p>What is the "algebraic" structure that this monad captures? Well as above it is equivalent to a presheaf structure <fr:tex display="inline"><![CDATA[\textrm {Set}^{\omega ^\textrm {op}}]]></fr:tex>. This can be equivalently stated as a family of maps <fr:tex display="inline"><![CDATA[\uparrow _n : X (n+1) \to  X n]]></fr:tex> for every <fr:tex display="inline"><![CDATA[n : \mathbb {N}]]></fr:tex>. This can be expressed as a morphism <fr:tex display="inline"><![CDATA[(y1 \multimap  X) \to  X]]></fr:tex> in <fr:tex display="inline"><![CDATA[\textrm {Set}^\mathbb {N}]]></fr:tex>. So this also provides an example of an algebra with respect to "linear" arities that is not a strong monad. This is why <fr:link href="/Staton-FOSSACS-2010/" title="Completeness for algebraic theories of local state" uri="https://um-catlab.github.io/Staton-FOSSACS-2010/" display-uri="Staton-FOSSACS-2010" type="local">Staton</fr:link> reformulates the notion of a block-algebra, which <fr:link href="/PlotkinPower-FOSSACS-2002/" title="Notions of Computation Determine Monads" uri="https://um-catlab.github.io/PlotkinPower-FOSSACS-2002/" display-uri="PlotkinPower-FOSSACS-2002" type="local">Plotkin and Power</fr:link> had stated as a similar linear operation.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/maxsnew/" title="Max S. New" uri="https://um-catlab.github.io/maxsnew/" display-uri="maxsnew" type="local">Max S. New</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2026</fr:year>
+                  <fr:month>6</fr:month>
+                  <fr:day>1</fr:day>
+                </fr:date>
                 <fr:uri>https://um-catlab.github.io/KAYO/</fr:uri>
                 <fr:display-uri>KAYO</fr:display-uri>
                 <fr:route>/KAYO/</fr:route>
